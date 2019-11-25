@@ -1,0 +1,228 @@
+fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ cd openid-connect-server-webapp/
+fanhonglingdeMacBook-Pro:openid-connect-server-webapp fanhongling$ mvn jetty:run-war
+[INFO] Scanning for projects...
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for org.mitre:openid-connect-server-webapp:war:1.3.4-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building OpenID Connect Server Webapp 1.3.4-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> jetty-maven-plugin:9.4.3.v20170317:run-war (default-cli) > package @ openid-connect-server-webapp >>>
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ openid-connect-server-webapp ---
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-3) @ openid-connect-server-webapp ---
+[INFO]
+[INFO] --- jacoco-maven-plugin:0.7.9:prepare-agent (default) @ openid-connect-server-webapp ---
+[INFO] argLine set to -javaagent:/Users/fanhongling/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/jacoco.exec
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ openid-connect-server-webapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 30 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ openid-connect-server-webapp ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ openid-connect-server-webapp ---
+[INFO] /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/main/webapp/
+[INFO] Executing the mojo:
+[INFO] Wro4j Model path: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/main/webapp/WEB-INF/wro.xml
+[INFO] targetGroups: bootstrap,bootstrap-responsive
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target
+[INFO] destinationFolder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT
+[INFO] jsDestinationFolder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/js
+[INFO] cssDestinationFolder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/resources/bootstrap2/css
+[INFO] The following groups will be processed: [bootstrap, bootstrap-responsive]
+[INFO] folder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/resources/bootstrap2/css
+[INFO] processing group: bootstrap.css
+[INFO] file size: bootstrap.css -> 125324 bytes
+[INFO] /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/resources/bootstrap2/css/bootstrap.css (125324 bytes)
+[INFO] folder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/js
+[INFO] processing group: bootstrap.js
+[INFO] folder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/resources/bootstrap2/css
+[INFO] processing group: bootstrap-responsive.css
+[INFO] file size: bootstrap-responsive.css -> 21701 bytes
+[INFO] /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/resources/bootstrap2/css/bootstrap-responsive.css (21701 bytes)
+[INFO] folder: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT/js
+[INFO] processing group: bootstrap-responsive.js
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ openid-connect-server-webapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ openid-connect-server-webapp ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ openid-connect-server-webapp ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jacoco-maven-plugin:0.7.9:report (report) @ openid-connect-server-webapp ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO]
+[INFO] --- maven-war-plugin:3.0.0:war (default-war) @ openid-connect-server-webapp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [openid-connect-server-webapp] in [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/main/webapp] to [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT]
+[INFO] Copying webapp webResources [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/main/webapp] to [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT]
+[INFO] Copying webapp resources [/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/src/main/webapp]
+[INFO] Webapp assembled in [1420 msecs]
+[INFO] Building war: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp.war
+[INFO]
+[INFO] --- maven-javadoc-plugin:2.10.4:jar (attach-javadocs) @ openid-connect-server-webapp ---
+[INFO]
+[INFO] >>> maven-source-plugin:3.0.1:jar (attach-sources) > generate-sources @ openid-connect-server-webapp >>>
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ openid-connect-server-webapp ---
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-3) @ openid-connect-server-webapp ---
+[INFO]
+[INFO] --- jacoco-maven-plugin:0.7.9:prepare-agent (default) @ openid-connect-server-webapp ---
+[INFO] argLine set to -javaagent:/Users/fanhongling/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/jacoco.exec
+[INFO]
+[INFO] <<< maven-source-plugin:3.0.1:jar (attach-sources) < generate-sources @ openid-connect-server-webapp <<<
+[INFO]
+[INFO]
+[INFO] --- maven-source-plugin:3.0.1:jar (attach-sources) @ openid-connect-server-webapp ---
+[INFO] Building jar: /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp-1.3.4-SNAPSHOT-sources.jar
+[INFO]
+[INFO] <<< jetty-maven-plugin:9.4.3.v20170317:run-war (default-cli) < package @ openid-connect-server-webapp <<<
+[INFO]
+[INFO]
+[INFO] --- jetty-maven-plugin:9.4.3.v20170317:run-war (default-cli) @ openid-connect-server-webapp ---
+[INFO] Logging initialized @21218ms to org.eclipse.jetty.util.log.Slf4jLog
+[INFO] Configuring Jetty for project: OpenID Connect Server Webapp
+[INFO] Context path = /openid-connect-server-webapp
+[INFO] Tmp directory = /Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/tmp
+[INFO] Web defaults = org/eclipse/jetty/webapp/webdefault.xml
+[INFO] Web overrides =  none
+[INFO] jetty-9.4.3.v20170317
+[INFO] Scanning elapsed time=60ms
+[INFO] DefaultSessionIdManager workerName=node0
+[INFO] No SessionScavenger set, using defaults
+[INFO] Scavenging every 660000ms
+[INFO] Initializing Spring root WebApplicationContext
+INFO : org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+INFO : org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sun Nov 24 16:44:04 PST 2019]; root of context hierarchy
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/application-context.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/server-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/data-context.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/endpoint-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/authz-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/locale-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/user-context.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/assertion-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/jpa-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/crypto-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/task-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/ui-config.xml]
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/local-config.xml]
+INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO : org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'taskExecutor' of type [org.springframework.scheduling.config.TaskExecutorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO : org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'taskExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO : org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'taskScheduler' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+WARN : org.mitre.openid.connect.config.ConfigurationPropertiesBean -
+
+**
+** WARNING: Configured issuer url is not using https scheme.
+**
+
+
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/devicecode],methods=[POST],consumes=[application/x-www-form-urlencoded],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.DeviceEndpoint.requestDeviceCode(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/device],methods=[GET]}" onto public java.lang.String org.mitre.oauth2.web.DeviceEndpoint.requestUserCode(java.lang.String,org.springframework.ui.ModelMap,javax.servlet.http.HttpSession)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/device/verify],methods=[POST]}" onto public java.lang.String org.mitre.oauth2.web.DeviceEndpoint.readUserCode(java.lang.String,org.springframework.ui.ModelMap,javax.servlet.http.HttpSession)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/device/approve],methods=[POST]}" onto public java.lang.String org.mitre.oauth2.web.DeviceEndpoint.approveDevice(java.lang.String,java.lang.Boolean,org.springframework.ui.ModelMap,org.springframework.security.core.Authentication,javax.servlet.http.HttpSession)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/oauth/confirm_access]}" onto public java.lang.String org.mitre.oauth2.web.OAuthConfirmationController.confimAccess(java.util.Map<java.lang.String, java.lang.Object>,org.springframework.security.oauth2.provider.AuthorizationRequest,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/scopes],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.ScopeAPI.getAll(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/scopes/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.ScopeAPI.updateScope(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/scopes/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.ScopeAPI.getScope(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/scopes],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.ScopeAPI.createScope(java.lang.String,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/scopes/{id}],methods=[DELETE]}" onto public java.lang.String org.mitre.oauth2.web.ScopeAPI.deleteScope(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/blacklist],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.BlacklistAPI.addNewBlacklistedSite(java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/blacklist],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.BlacklistAPI.getAllBlacklistedSites(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/blacklist/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.BlacklistAPI.updateBlacklistedSite(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/blacklist/{id}],methods=[DELETE]}" onto public java.lang.String org.mitre.openid.connect.web.BlacklistAPI.deleteBlacklistedSite(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/blacklist/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.BlacklistAPI.getBlacklistedSite(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/register/{id}],methods=[DELETE],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.DynamicClientRegistrationEndpoint.deleteClient(java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/register/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.DynamicClientRegistrationEndpoint.updateClient(java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.DynamicClientRegistrationEndpoint.registerNewClient(java.lang.String,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/register/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.DynamicClientRegistrationEndpoint.readClientConfiguration(java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/approved/{id}],methods=[DELETE]}" onto public java.lang.String org.mitre.openid.connect.web.ApprovedSiteAPI.deleteApprovedSite(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/approved],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ApprovedSiteAPI.getAllApprovedSites(org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/approved/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ApprovedSiteAPI.getApprovedSite(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/endsession],methods=[GET]}" onto public java.lang.String org.mitre.openid.connect.web.EndSessionEndpoint.endSession(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,org.springframework.security.core.Authentication,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/endsession],methods=[POST]}" onto public java.lang.String org.mitre.openid.connect.web.EndSessionEndpoint.processLogout(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession,org.springframework.security.core.Authentication,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ProtectedResourceRegistrationEndpoint.registerNewProtectedResource(java.lang.String,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ProtectedResourceRegistrationEndpoint.readResourceConfiguration(java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ProtectedResourceRegistrationEndpoint.updateProtectedResource(java.lang.String,java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/{id}],methods=[DELETE],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ProtectedResourceRegistrationEndpoint.deleteResource(java.lang.String,org.springframework.ui.Model,org.springframework.security.oauth2.provider.OAuth2Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/data],methods=[GET],produces=[application/json]}" onto public void org.mitre.openid.connect.web.DataAPI.exportData(javax.servlet.http.HttpServletResponse,java.security.Principal) throws java.io.IOException
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/data],methods=[POST],consumes=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.DataAPI.importData(java.io.Reader,org.springframework.ui.Model) throws java.io.IOException
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/jwk],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.JWKSetPublishingEndpoint.getJwk(org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[ || /home || /index]}" onto public java.lang.String org.mitre.openid.connect.web.RootController.showHomePage(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/about || /about/]}" onto public java.lang.String org.mitre.openid.connect.web.RootController.showAboutPage(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/stats || /stats/]}" onto public java.lang.String org.mitre.openid.connect.web.RootController.showStatsPage(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/contact || /contact/]}" onto public java.lang.String org.mitre.openid.connect.web.RootController.showContactPage(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/manage/**]}" onto public java.lang.String org.mitre.openid.connect.web.RootController.showClientManager(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/stats/summary],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.StatsAPI.statsSummary(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/stats/byclientid/{id}],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.StatsAPI.statsByClientId(java.lang.String,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/whitelist],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.WhitelistAPI.getAllWhitelistedSites(org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/whitelist],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.WhitelistAPI.addNewWhitelistedSite(java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/whitelist/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.WhitelistAPI.updateWhitelistedSite(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/whitelist/{id}],methods=[DELETE]}" onto public java.lang.String org.mitre.openid.connect.web.WhitelistAPI.deleteWhitelistedSite(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/whitelist/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.WhitelistAPI.getWhitelistedSite(java.lang.Long,org.springframework.ui.ModelMap)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/.well-known/openid-configuration]}" onto public java.lang.String org.mitre.discovery.web.DiscoveryEndpoint.providerConfiguration(org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/.well-known/webfinger],produces=[application/json]}" onto public java.lang.String org.mitre.discovery.web.DiscoveryEndpoint.webfinger(java.lang.String,java.lang.String,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/introspect]}" onto public java.lang.String org.mitre.oauth2.web.IntrospectionEndpoint.verify(java.lang.String,java.lang.String,org.springframework.security.core.Authentication,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/revoke]}" onto public java.lang.String org.mitre.oauth2.web.RevocationEndpoint.revoke(java.lang.String,java.lang.String,org.springframework.security.core.Authentication,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/access],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getAllAccessTokens(org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/refresh],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getAllRefreshTokens(org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/access/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getAccessTokenById(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/refresh/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getRefreshTokenById(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/access/{id}],methods=[DELETE],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.deleteAccessTokenById(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/client/{clientId}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getAccessTokensByClientId(java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/registration/{clientId}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.getRegistrationTokenByClientId(java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/registration/{clientId}],methods=[PUT],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.rotateRegistrationTokenByClientId(java.lang.String,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/tokens/refresh/{id}],methods=[DELETE],produces=[application/json]}" onto public java.lang.String org.mitre.oauth2.web.TokenAPI.deleteRefreshTokenById(java.lang.Long,org.springframework.ui.ModelMap,java.security.Principal)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ClientAPI.apiGetAllClients(org.springframework.ui.Model,org.springframework.security.core.Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ClientAPI.apiAddClient(java.lang.String,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients/{id}],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ClientAPI.apiUpdateClient(java.lang.Long,java.lang.String,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients/{id}],methods=[DELETE]}" onto public java.lang.String org.mitre.openid.connect.web.ClientAPI.apiDeleteClient(java.lang.Long,org.springframework.web.servlet.ModelAndView)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients/{id}],methods=[GET],produces=[application/json]}" onto public java.lang.String org.mitre.openid.connect.web.ClientAPI.apiShowClient(java.lang.Long,org.springframework.ui.Model,org.springframework.security.core.Authentication)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/clients/{id}/logo],methods=[GET],produces=[image/gif || image/jpeg || image/png]}" onto public org.springframework.http.ResponseEntity<byte[]> org.mitre.openid.connect.web.ClientAPI.getClientLogo(java.lang.Long,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/userinfo],methods=[GET || POST],produces=[application/json || application/jwt]}" onto public java.lang.String org.mitre.openid.connect.web.UserInfoEndpoint.getInfo(java.lang.String,java.lang.String,org.springframework.security.oauth2.provider.OAuth2Authentication,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sun Nov 24 16:44:04 PST 2019]; root of context hierarchy
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sun Nov 24 16:44:04 PST 2019]; root of context hierarchy
+INFO : org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in OAuth2ExceptionHandler
+INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+WARN : com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=org.hsqldb.jdbcDriver was not found, trying direct instantiation.
+INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/error] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO : org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10213 ms
+[INFO] Initializing Spring FrameworkServlet 'spring'
+INFO : org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'spring': initialization started
+INFO : org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Sun Nov 24 16:44:14 PST 2019]; parent: Root WebApplicationContext
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-servlet.xml]
+INFO : org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'spring': initialization completed in 45 ms
+[INFO] Started o.e.j.m.p.JettyWebAppContext@64688978{/openid-connect-server-webapp,file:///Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/tmp/webapp/,AVAILABLE}{/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp.war}
+[INFO] Started ServerConnector@17caf362{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[INFO] Started @34194ms
+[INFO] Started Jetty Server
+
+INFO : org.mitre.openid.connect.config.JsonMessageSource - No locale loaded, trying to load from ServletContext resource [/resources/js/locale/en/messages.json]
+[EL Info]: 2019-11-24 16:47:31.856--ServerSession(1195316980)--EclipseLink, version: Eclipse Persistence Services - 2.7.4.v20190115-ad5b7c6b2a
+[EL Info]: connection: 2019-11-24 16:47:32.217--ServerSession(1195316980)--/file:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/tmp/webapp/WEB-INF/lib/openid-connect-common-1.3.4-SNAPSHOT.jar_defaultPersistenceUnit login successful
+INFO : org.mitre.openid.connect.config.JsonMessageSource - No locale loaded, trying to load from ServletContext resource [/resources/js/locale/zh_CN/messages.json]
+[INFO] Session id node0mrtsp50y8zm515s265gg7jkj80 swapped for new id node015wku5lidbe8l1tyl0fkf1edif1
+INFO : org.mitre.openid.connect.web.AuthenticationTimeStamper - Successful Authentication of user at Sun Nov 24 16:48:04 PST 2019

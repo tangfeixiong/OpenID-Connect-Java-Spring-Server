@@ -1,3 +1,11 @@
+.DS_Store
+.tiff
+.ppt
+.pdf
+
+.vagrant/
+ubuntu-*-cloudimg-console.log
+
 target
 *~
 bin
