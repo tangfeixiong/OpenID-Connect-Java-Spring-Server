@@ -34,9 +34,54 @@ Start up from host (for example Mac)
 
     fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ vagrant up
 
--> outputs [vagrant-up-output.txt](./vagrant-up-output.txt)
+-> more outputs: [vagrant-command-output.txt](./vagrant-command-output.txt)
   
 issue: failed while configuring network interfaces
+
+* ssh vm
+
+    fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ vagrant ssh
+    Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)
+    ...
+    
+* init apt-get
+
+    vagrant@ubuntu-bionic:~$ sudo apt-get update
+    Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+    ...
+    
+-> more outputs: [apt-get-output.txt](./apt-get-output.txt)
+
+* install
+
+    vagrant@ubuntu-bionic:~$ sudo apt-get install ifupdown
+    ...
+    
+* exit
+
+    vagrant@ubuntu-bionic:~$ exit
+    logout
+    Connection to 127.0.0.1 closed.
+
+* reload from vagrant
+
+    fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ vagrant reload
+
+### Java
+
+Install OpenJDK
+
+    vagrant@ubuntu-bionic:~$ sudo apt-get install -y default-jdk
+    ...
+    vagrant@ubuntu-bionic:~$ java -version
+    openjdk version "11.0.4" 2019-07-16
+    OpenJDK Runtime Environment (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3)
+    OpenJDK 64-Bit Server VM (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mode, sharing)
+    vagrant@ubuntu-bionic:~$ javac -version
+    javac 11.0.4
+
+Install Maven
+
 
 ## Build
 
@@ -46,7 +91,7 @@ For example
 
     fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ mvn package
 
--> outputs [maven-build-output.txt](./maven-build-output.txt)
+-> more outputs: [maven-build-output.txt](./maven-build-output.txt)
 
 ### Docker Build
 

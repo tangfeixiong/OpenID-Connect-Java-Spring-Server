@@ -226,3 +226,14 @@ INFO : org.mitre.openid.connect.config.JsonMessageSource - No locale loaded, try
 INFO : org.mitre.openid.connect.config.JsonMessageSource - No locale loaded, trying to load from ServletContext resource [/resources/js/locale/zh_CN/messages.json]
 [INFO] Session id node0mrtsp50y8zm515s265gg7jkj80 swapped for new id node015wku5lidbe8l1tyl0fkf1edif1
 INFO : org.mitre.openid.connect.web.AuthenticationTimeStamper - Successful Authentication of user at Sun Nov 24 16:48:04 PST 2019
+
+
+^C[INFO] Stopped ServerConnector@17caf362{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+[INFO] Stopped scavenging
+[INFO] Destroying Spring FrameworkServlet 'spring'
+INFO : org.springframework.web.context.support.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'spring-servlet': startup date [Sun Nov 24 16:44:14 PST 2019]; parent: Root WebApplicationContext
+[INFO] Closing Spring root WebApplicationContext
+INFO : org.springframework.web.context.support.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sun Nov 24 16:44:04 PST 2019]; root of context hierarchy
+[EL Info]: connection: 2019-11-24 17:09:26.226--ServerSession(1195316980)--/file:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/tmp/webapp/WEB-INF/lib/openid-connect-common-1.3.4-SNAPSHOT.jar_defaultPersistenceUnit logout successful
+[INFO] Stopped o.e.j.m.p.JettyWebAppContext@64688978{/openid-connect-server-webapp,file:///Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/tmp/webapp/,UNAVAILABLE}{/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server/openid-connect-server-webapp/target/openid-connect-server-webapp.war}
+[INFO] Jetty server exiting.

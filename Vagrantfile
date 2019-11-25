@@ -108,11 +108,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ubuntu-openjdk", type: "shell", run: "never", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install openjdk-10-jdk"
-    # sudo apt install default-jdk
+    sudo apt-get install default-jdk
+    # sudo apt install default-jdk-headless
     # sudo apt-get install openjdk-8-jdk"
     # sudo apt-get install default-jre
-    # sudo apt-get install openjdk-11-jre-headless
+    # sudo apt-get install openjdk-11-jre-headless"
   SHELL
 
   #; https://github.com/dotless-de/vagrant-vbguest
