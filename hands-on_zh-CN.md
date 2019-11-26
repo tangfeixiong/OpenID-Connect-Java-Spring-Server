@@ -286,6 +286,9 @@ Build with GIT repository
 
     vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker build --force-rm --no-cache --rm --tag tangfeixiong/openid-connect:ci -f Dockerfile.git-pull-to-maven-build ./docker/
 
+    vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker images tangfeixiong/openid-connect
+    REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+    tangfeixiong/openid-connect   ci                  b2b47f7dd858        17 seconds ago      753MB
 
 
 

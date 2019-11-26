@@ -27,13 +27,13 @@ RUN tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX) \
   && mkdir /tmp/build \
   \
   && tmp_file=$(find ./openid-connect-client/target/ -noleaf -name *SNAPSHOT.jar) \
-  && cp \$tmp_file /tmp/build/openid-connect-client.jar  \
+  && cp $tmp_file /tmp/build/openid-connect-client.jar  \
   && tmp_file=$(find ./openid-connect-common/target/ -noleaf -name *SNAPSHOT.jar) \
-  && cp \$tmp_file /tmp/build/openid-connect-common.jar  \
+  && cp $tmp_file /tmp/build/openid-connect-common.jar  \
   && tmp_file=$(find ./openid-connect-server/target/ -noleaf -name *SNAPSHOT.jar) \
-  && cp \$tmp_file /tmp/build/openid-connect-server.jar  \
+  && cp $tmp_file /tmp/build/openid-connect-server.jar  \
   && tmp_file=$(find ./openid-connect-server-webapp/target/ -noleaf -name *webapp.war) \
-  && cp \$tmp_file /tmp/build/openid-connect-server-webapp.war  \
+  && cp $tmp_file /tmp/build/openid-connect-server-webapp.war  \
   \
   && echo
 
