@@ -17,7 +17,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: Adapter 1: nat
     default: Adapter 2: hostonly
 ==> default: Forwarding ports...
-    default: 80 (guest) => 19080 (host) (adapter 1)
+    default: 8080 (guest) => 19080 (host) (adapter 1)
     default: 443 (guest) => 19443 (host) (adapter 1)
     default: 22 (guest) => 2200 (host) (adapter 1)
 ==> default: Running 'pre-boot' VM customizations...
@@ -107,7 +107,7 @@ fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ vagrant 
     default: Adapter 1: nat
     default: Adapter 2: hostonly
 ==> default: Forwarding ports...
-    default: 80 (guest) => 19080 (host) (adapter 1)
+    default: 8080 (guest) => 19080 (host) (adapter 1)
     default: 443 (guest) => 19443 (host) (adapter 1)
     default: 22 (guest) => 2200 (host) (adapter 1)
 ==> default: Running 'pre-boot' VM customizations...

@@ -1,0 +1,143 @@
+
+vagrant@ubuntu-bionic:~$ sudo systemctl --no-pager status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; disabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-11-25 23:37:01 UTC; 3min 19s ago
+     Docs: https://docs.docker.com
+ Main PID: 6138 (dockerd)
+    Tasks: 10
+   CGroup: /system.slice/docker.service
+           └─6138 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Nov 25 23:37:00 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:00.550297147Z" level=warning msg="Your kernel does not support cgroup rt period"
+Nov 25 23:37:00 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:00.550425605Z" level=warning msg="Your kernel does not support cgroup rt runtime"
+Nov 25 23:37:00 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:00.551608963Z" level=info msg="Loading containers: start."
+Nov 25 23:37:00 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:00.847638967Z" level=info msg="Default bridge (docker0) is assigned with…P address"
+Nov 25 23:37:01 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:01.042217876Z" level=info msg="Loading containers: done."
+Nov 25 23:37:01 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:01.049036163Z" level=warning msg="failed to retrieve runc version: unkno…0.1-dev\n"
+Nov 25 23:37:01 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:01.090530602Z" level=info msg="Docker daemon" commit=2d0083d graphdriver…on=18.09.7
+Nov 25 23:37:01 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:01.090686888Z" level=info msg="Daemon has completed initialization"
+Nov 25 23:37:01 ubuntu-bionic systemd[1]: Started Docker Application Container Engine.
+Nov 25 23:37:01 ubuntu-bionic dockerd[6138]: time="2019-11-25T23:37:01.144020751Z" level=info msg="API listen on /var/run/docker.sock"
+Hint: Some lines were ellipsized, use -l to show in full.
+vagrant@ubuntu-bionic:~$ sudo usermod -aG docker ${USER}
+vagrant@ubuntu-bionic:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+fanhonglingdeMacBook-Pro:OpenID-Connect-Java-Spring-Server fanhongling$ vagrant ssh
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Nov 25 23:45:44 UTC 2019
+
+  System load:  0.0               Users logged in:        0
+  Usage of /:   19.2% of 9.63GB   IP address for enp0s3:  10.0.2.15
+  Memory usage: 5%                IP address for enp0s8:  172.28.128.3
+  Swap usage:   0%                IP address for docker0: 172.17.0.1
+  Processes:    99
+
+ * Overheard at KubeCon: "microk8s.status just blew my mind".
+
+     https://microk8s.io/docs/commands#microk8s.status
+
+3 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Mon Nov 25 23:21:46 2019 from 10.0.2.2
+vagrant@ubuntu-bionic:~$ docker pull openjdk:8u232-jdk
+8u232-jdk: Pulling from library/openjdk
+844c33c7e6ea: Pull complete 
+ada5d61ae65d: Pull complete 
+f8427fdf4292: Pull complete 
+f025bafc4ab8: Pull complete 
+67b8714e1225: Pull complete 
+64b12da521a3: Pull complete 
+2e38df533772: Pull complete 
+Digest: sha256:e1415d5d2a41e2f4f44c1a48f2f268a9da5d7fcd1e9b2773d32f4645b30ec69b
+Status: Downloaded newer image for openjdk:8u232-jdk
+
+vagrant@ubuntu-bionic:~$ docker pull openjdk:8-jdk-slim
+8-jdk-slim: Pulling from library/openjdk
+000eee12ec04: Pull complete 
+2f1dc2bdcfe1: Pull complete 
+c2a806caa98c: Pull complete 
+c5943b75c974: Pull complete 
+Digest: sha256:71592a5c3eecf243b624f0a718402bb54d9ccb282b3ae3aa108f62b5cd5539d1
+Status: Downloaded newer image for openjdk:8-jdk-slim
+
+vagrant@ubuntu-bionic:~$ docker pull openjdk:8-jdk-alpine
+8-jdk-alpine: Pulling from library/openjdk
+e7c96db7181b: Already exists 
+f910a506b6cb: Already exists 
+c2274a1a0e27: Pull complete 
+Digest: sha256:94792824df2df33402f201713f932b58cb9de94a0cd524164a0f2283343547b3
+Status: Downloaded newer image for openjdk:8-jdk-alpine
+
+
+vagrant@ubuntu-bionic:~$ docker pull tomcat:9.0-jdk8-openjdk
+9.0-jdk8-openjdk: Pulling from library/tomcat
+844c33c7e6ea: Already exists 
+ada5d61ae65d: Already exists 
+f8427fdf4292: Already exists 
+f025bafc4ab8: Already exists 
+67b8714e1225: Already exists 
+64b12da521a3: Already exists 
+2e38df533772: Already exists 
+4144d55bbb47: Pull complete 
+e7a9c7c633e3: Pull complete 
+81b4222ef0da: Pull complete 
+Digest: sha256:e2169fa2a337e6ec1a5ac280dd31d3a85dce597189d64a7fd31e2f603358b403
+Status: Downloaded newer image for tomcat:9.0-jdk8-openjdk
+
+vagrant@ubuntu-bionic:~$ docker pull tomcat:9-jdk8-openjdk-slim
+9-jdk8-openjdk-slim: Pulling from library/tomcat
+000eee12ec04: Already exists 
+2f1dc2bdcfe1: Already exists 
+c2a806caa98c: Already exists 
+c5943b75c974: Already exists 
+34d036bf1b38: Pull complete 
+1cb6c644a606: Pull complete 
+590881daf78b: Pull complete 
+Digest: sha256:bf48bc4601636440a830c30b1afa89f4113a57aa828aba986ebde2a61f0d9ab9
+Status: Downloaded newer image for tomcat:9-jdk8-openjdk-slim
+
+
+vagrant@ubuntu-bionic:~$ docker pull tomcat:9.0-jre8-slim
+9.0-jre8-slim: Pulling from library/tomcat
+743f2d6c1f65: Pull complete 
+5c14188d0980: Pull complete 
+96b1d66a77cb: Pull complete 
+16218aebd626: Pull complete 
+9483ae9711f0: Pull complete 
+d0b79f4eafe7: Pull complete 
+c56161715f8b: Pull complete 
+355aab75d166: Pull complete 
+9409c53640d1: Pull complete 
+Digest: sha256:4dcf8025d2594778cf60e287863f73a833461c15d9e0280288f26f1280144bb1
+Status: Downloaded newer image for tomcat:9.0-jre8-slim
+
+vagrant@ubuntu-bionic:~$ docker pull tomcat:9.0-jre8-alpine
+9.0-jre8-alpine: Pulling from library/tomcat
+e7c96db7181b: Pull complete 
+f910a506b6cb: Pull complete 
+b6abafe80f63: Pull complete 
+d8c966ddef98: Pull complete 
+15b754e99755: Pull complete 
+4227393eb352: Pull complete 
+Digest: sha256:17accf0afeeecce0310d363490cd60a788aa4630ab9c9c802231d6fbd4bb2375
+Status: Downloaded newer image for tomcat:9.0-jre8-alpine
+
+
+vagrant@ubuntu-bionic:~$ docker images
+REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
+tomcat              9.0-jdk8-openjdk      8957e09b76fa        2 days ago          508MB
+openjdk             8u232-jdk             09df0563bdfc        2 days ago          488MB
+tomcat              9-jdk8-openjdk-slim   593a0e4e93f7        3 days ago          304MB
+openjdk             8-jdk-slim            41fd53971008        3 days ago          284MB
+tomcat              9.0-jre8-alpine       387f9d021d3a        6 months ago        108MB
+tomcat              9.0-jre8-slim         66140ac62adb        6 months ago        225MB
+openjdk             8-jdk-alpine          a3562aa0b991        6 months ago        105MB
