@@ -247,10 +247,46 @@ Using default Ubuntu repository
 
     vagrant@ubuntu-bionic:~$ sudo usermod -aG docker ${USER}
 
+Then exit VM and enter again (vagrant ssh)
 
 Using Docker repository
 
     vagrant@ubuntu-bionic:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+2. Docker images for Maven
+
+Pull
+
+    vagrant@ubuntu-bionic:~$ docker pull openjdk:8u232-jdk
+    
+    vagrant@ubuntu-bionic:~$ docker pull tomcat:9-jdk8-openjdk-slim    
+
+    vagrant@ubuntu-bionic:~$ docker images
+    REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
+    tomcat              9.0-jdk8-openjdk      8957e09b76fa        2 days ago          508MB
+    openjdk             8u232-jdk             09df0563bdfc        2 days ago          488MB
+    tomcat              9-jdk8-openjdk-slim   593a0e4e93f7        3 days ago          304MB
+    openjdk             8-jdk-slim            41fd53971008        3 days ago          284MB
+
+Build Maven with OpenJDK 8
+
+    vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker build --force-rm --no-cache --rm --tag tangfeixiong/maven:openjdk8-slim -f docker/Dockerfile.maven-openjdk8 ./docker/
+
+validation
+
+    vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker run -ti --rm --name=temp-openjdk8slim  tangfeixiong/maven:openjdk8-slim "/bin/bash"
+
+asset
+
+    vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker images tangfeixiong/maven
+    REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+    tangfeixiong/maven   openjdk8-slim       6ac6282246c3        3 minutes ago       300MB
+
+Build with GIT repository
+
+    vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker build --force-rm --no-cache --rm --tag tangfeixiong/openid-connect:ci -f Dockerfile.git-pull-to-maven-build ./docker/
+
+
 
 
 ## Deploy

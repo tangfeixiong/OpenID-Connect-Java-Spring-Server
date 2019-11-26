@@ -1,0 +1,45 @@
+# Note
+# - install git
+# - git clone $GIT_REPO  # ARG GIT_REPO is initialized https://github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server
+# - mvn package 
+
+# FROM maven:3.6-jdk-8
+FROM tangfeixiong/maven:openjdk8-slim
+LABEL author="Feixiong Tang <tangfx128@gmail.com>"
+
+ARG GIT_REPO=https://github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server  
+ARG MAVEN_EXT   
+# ARG MAVEN_EXT="-DskipTests -Dmaven.javadoc.skip=true"    
+
+# Alpine
+# RUN apk add --no-cache curl tar bash procps git
+# Debian bug: E: Release file for http://security.debian.org/debian-security/dists/buster/updates/InRelease is not valid yet (invalid ...
+RUN sed -i 's%deb http://security.debian.org/debian-security%# &%; s%deb http://deb.debian.org/debian buster-updates%# &%' /etc/apt/sources.list \
+  && apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/* \
+  && sed -i 's%# \(deb http://security.debian.org/debian-security.*\)%\1%; s%# \(deb http://deb.debian.org/debian buster-updates.*\)%\1%' /etc/apt/sources.list
+
+RUN tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX) \
+  && git clone ${GIT_REPO} $tmp_dir \
+  && project_name=$(echo $tmp_dir | awk -F/ '{print $3}') \
+  && cd $tmp_dir \
+  && mvn package ${MAVEN_EXT:- -Dmaven.test.skip=true -Dmaven.javadoc.skip=true} \
+  \
+  && mkdir /tmp/build \
+  \
+  && tmp_file=$(find ./openid-connect-client/target/ -noleaf -name *SNAPSHOT.jar) \
+  && cp \$tmp_file /tmp/build/openid-connect-client.jar  \
+  && tmp_file=$(find ./openid-connect-common/target/ -noleaf -name *SNAPSHOT.jar) \
+  && cp \$tmp_file /tmp/build/openid-connect-common.jar  \
+  && tmp_file=$(find ./openid-connect-server/target/ -noleaf -name *SNAPSHOT.jar) \
+  && cp \$tmp_file /tmp/build/openid-connect-server.jar  \
+  && tmp_file=$(find ./openid-connect-server-webapp/target/ -noleaf -name *webapp.war) \
+  && cp \$tmp_file /tmp/build/openid-connect-server-webapp.war  \
+  \
+  && echo
+
+# RUN mvn package ${MAVEN_EXT}
+
+
+VOLUME ["/tmp/build"]
+
+CMD ["mvn", "install", "jetty:run-war"]

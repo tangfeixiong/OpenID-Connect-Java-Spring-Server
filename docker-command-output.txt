@@ -132,12 +132,216 @@ Digest: sha256:17accf0afeeecce0310d363490cd60a788aa4630ab9c9c802231d6fbd4bb2375
 Status: Downloaded newer image for tomcat:9.0-jre8-alpine
 
 
+vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker pull maven:3.6-jdk-8
+3.6-jdk-8: Pulling from library/maven
+844c33c7e6ea: Already exists 
+ada5d61ae65d: Already exists 
+f8427fdf4292: Already exists 
+f025bafc4ab8: Already exists 
+67b8714e1225: Already exists 
+64b12da521a3: Already exists 
+2e38df533772: Already exists 
+7cffd3d7999c: Pull complete 
+26dcf6dbd07d: Pull complete 
+37fc1cedb53f: Pull complete 
+Digest: sha256:d9527ee6c6c4c3eeb1529c55fd8cc86e44949be2216ca83973e64e0770760b3e
+Status: Downloaded newer image for maven:3.6-jdk-8
+
+
 vagrant@ubuntu-bionic:~$ docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 tomcat              9.0-jdk8-openjdk      8957e09b76fa        2 days ago          508MB
+maven               3.6-jdk-8             9b5dcb455379        2 days ago          499MB
 openjdk             8u232-jdk             09df0563bdfc        2 days ago          488MB
 tomcat              9-jdk8-openjdk-slim   593a0e4e93f7        3 days ago          304MB
 openjdk             8-jdk-slim            41fd53971008        3 days ago          284MB
 tomcat              9.0-jre8-alpine       387f9d021d3a        6 months ago        108MB
 tomcat              9.0-jre8-slim         66140ac62adb        6 months ago        225MB
 openjdk             8-jdk-alpine          a3562aa0b991        6 months ago        105MB
+
+
+Sending build context to Docker daemon  4.608kB
+Step 1/11 : FROM openjdk:8-jdk-slim
+ ---> 41fd53971008
+Step 2/11 : LABEL author="Miguel Doctor <migueldoctor@gmail.com>" me="Feixiong Tang <tangfx128@gmail.com>"
+ ---> Running in 129f0e9afc63
+Removing intermediate container 129f0e9afc63
+ ---> cc2f36578558
+Step 3/11 : RUN sed -i 's%deb http://security.debian.org/debian-security%# &%; s%deb http://deb.debian.org/debian buster-updates%# &%' /etc/apt/sources.list   && apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*   && sed -i 's%# \(deb http://security.debian.org/debian-security.*\)%\1%; s%# \(deb http://deb.debian.org/debian buster-updates.*\)%\1%' /etc/apt/sources.list
+ ---> Running in 4bf7893e8c86
+Get:1 http://cdn-fastly.deb.debian.org/debian buster InRelease [122 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian buster/main amd64 Packages [7908 kB]
+Fetched 8029 kB in 24s (331 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  lsb-base
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  krb5-locales libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libldap-2.4-2 libldap-common libnghttp2-14 libpsl5 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 publicsuffix
+Suggested packages:
+  krb5-doc krb5-user libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+  libsasl2-modules-sql
+The following NEW packages will be installed:
+  curl krb5-locales libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common libnghttp2-14 libpsl5
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+  publicsuffix
+0 upgraded, 18 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2471 kB of archives.
+After this operation, 5837 kB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian buster/main amd64 krb5-locales all 1.17-3 [95.4 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkeyutils1 amd64 1.6-6 [15.0 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkrb5support0 amd64 1.17-3 [65.6 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libk5crypto3 amd64 1.17-3 [121 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkrb5-3 amd64 1.17-3 [370 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libgssapi-krb5-2 amd64 1.17-3 [158 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-1 [69.0 kB]
+Get:8 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-2 amd64 2.1.27+dfsg-1 [106 kB]
+Get:9 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libldap-common all 2.4.47+dfsg-3+deb10u1 [89.6 kB]
+Get:10 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libldap-2.4-2 amd64 2.4.47+dfsg-3+deb10u1 [225 kB]
+Get:11 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libnghttp2-14 amd64 1.36.0-2+deb10u1 [85.0 kB]
+Get:12 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpsl5 amd64 0.20.2-2 [53.7 kB]
+Get:13 http://cdn-fastly.deb.debian.org/debian buster/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2 [60.5 kB]
+Get:14 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libssh2-1 amd64 1.8.0-2.1 [140 kB]
+Get:15 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libcurl4 amd64 7.64.0-4 [332 kB]
+Get:16 http://cdn-fastly.deb.debian.org/debian buster/main amd64 curl amd64 7.64.0-4 [264 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-modules amd64 2.1.27+dfsg-1 [104 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian buster/main amd64 publicsuffix all 20190415.1030-1 [116 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2471 kB in 3s (975 kB/s)
+Selecting previously unselected package krb5-locales.
+(Reading database ... 6888 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.17-3_all.deb ...
+Unpacking krb5-locales (1.17-3) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../01-libkeyutils1_1.6-6_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../02-libkrb5support0_1.17-3_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.17-3) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../03-libk5crypto3_1.17-3_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.17-3) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../04-libkrb5-3_1.17-3_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.17-3) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../05-libgssapi-krb5-2_1.17-3_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.17-3) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../06-libsasl2-modules-db_2.1.27+dfsg-1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../07-libsasl2-2_2.1.27+dfsg-1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg-1) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../08-libldap-common_2.4.47+dfsg-3+deb10u1_all.deb ...
+Unpacking libldap-common (2.4.47+dfsg-3+deb10u1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../09-libldap-2.4-2_2.4.47+dfsg-3+deb10u1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../10-libnghttp2-14_1.36.0-2+deb10u1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../11-libpsl5_0.20.2-2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.20.2-2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../12-librtmp1_2.4+20151223.gitfa8646d.1-2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../13-libssh2-1_1.8.0-2.1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.8.0-2.1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../14-libcurl4_7.64.0-4_amd64.deb ...
+Unpacking libcurl4:amd64 (7.64.0-4) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../15-curl_7.64.0-4_amd64.deb ...
+Unpacking curl (7.64.0-4) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../16-libsasl2-modules_2.1.27+dfsg-1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg-1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../17-publicsuffix_20190415.1030-1_all.deb ...
+Unpacking publicsuffix (20190415.1030-1) ...
+Setting up libkeyutils1:amd64 (1.6-6) ...
+Setting up libpsl5:amd64 (0.20.2-2) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg-1) ...
+Setting up libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
+Setting up krb5-locales (1.17-3) ...
+Setting up libldap-common (2.4.47+dfsg-3+deb10u1) ...
+Setting up libkrb5support0:amd64 (1.17-3) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Setting up libk5crypto3:amd64 (1.17-3) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg-1) ...
+Setting up libssh2-1:amd64 (1.8.0-2.1) ...
+Setting up libkrb5-3:amd64 (1.17-3) ...
+Setting up publicsuffix (20190415.1030-1) ...
+Setting up libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u1) ...
+Setting up libgssapi-krb5-2:amd64 (1.17-3) ...
+Setting up libcurl4:amd64 (7.64.0-4) ...
+Setting up curl (7.64.0-4) ...
+Processing triggers for libc-bin (2.28-10) ...
+Removing intermediate container 4bf7893e8c86
+ ---> bca5452f4a94
+Step 4/11 : ARG MAVEN_VERSION=3.6.1
+ ---> Running in dd3e67a95208
+Removing intermediate container dd3e67a95208
+ ---> e6d13230d8a8
+Step 5/11 : ARG USER_HOME_DIR="/root"
+ ---> Running in 9109c863b68d
+Removing intermediate container 9109c863b68d
+ ---> 59429536dfdd
+Step 6/11 : ARG SHA=b4880fb7a3d81edd190a029440cdf17f308621af68475a4fe976296e71ff4a4b546dd6d8a58aaafba334d309cc11e638c52808a4b0e818fc0fd544226d952544
+ ---> Running in 58260f7c604c
+Removing intermediate container 58260f7c604c
+ ---> 53c394d3525a
+Step 7/11 : ARG BASE_URL=https://www-us.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries
+ ---> Running in 3ee203779ac3
+Removing intermediate container 3ee203779ac3
+ ---> fb87f470fd7d
+Step 8/11 : RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && echo "Downlaoding maven"   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz     && echo "Checking download hash"   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -     && echo "Unziping maven"   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1     && echo "Cleaning and setting links"   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+ ---> Running in ea572876545f
+Downlaoding maven
+Checking download hash
+/tmp/apache-maven.tar.gz: OK
+Unziping maven
+Cleaning and setting links
+Removing intermediate container ea572876545f
+ ---> 0b0c43f6745d
+Step 9/11 : ENV MAVEN_HOME /usr/share/maven
+ ---> Running in aad1670155cf
+Removing intermediate container aad1670155cf
+ ---> 35b3890c2c4f
+Step 10/11 : ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
+ ---> Running in 49253c9c64c4
+Removing intermediate container 49253c9c64c4
+ ---> 420d650cb730
+Step 11/11 : CMD [""]
+ ---> Running in 7e29b7e0237a
+Removing intermediate container 7e29b7e0237a
+ ---> 6ac6282246c3
+Successfully built 6ac6282246c3
+Successfully tagged tangfeixiong/maven:openjdk8-slim
+
+
+vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker run -ti --rm --name=temp-openjdk8slim  tangfeixiong/maven:openjdk8-slim "/bin/bash"
+root@125d554c5964:/# mvn --version
+Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-04T19:00:29Z)
+Maven home: /usr/share/maven
+Java version: 1.8.0_232, vendor: Oracle Corporation, runtime: /usr/local/openjdk-8/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "4.15.0-70-generic", arch: "amd64", family: "unix"
+root@125d554c5964:/# exit
+exit
+
+vagrant@ubuntu-bionic:/Users/fanhongling/Downloads/workspace/src/github.com/tangfeixiong/OpenID-Connect-Java-Spring-Server$ docker images tangfeixiong/maven
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+tangfeixiong/maven   openjdk8-slim       6ac6282246c3        3 minutes ago       300MB
